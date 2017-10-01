@@ -1,5 +1,5 @@
 group 'ExellentHound'
-version '0.01'
+version '0.02'
 
 buildscript {
     ext.kotlin_version = '1.1.50'
@@ -43,7 +43,7 @@ compileTestKotlin {
 jar {
     manifest {
         attributes 'Implementation-Title': 'ShiftColumns', 'Implementation-Version': 1.0
-        attributes "Main-Class" : "net.tnaiki.exellenthound.datadog.Client"
+        attributes "Main-Class" : "net.tnaiki.exellenthound.datadog.ClientKt"
     }
     from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
 }
